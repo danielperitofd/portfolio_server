@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel | Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" />
+      <h1>Daniel</h1>
+      <p>Desenvolvedor Fullstack no Brasil</p>
+      <nav>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <footer>
+        <p>&copy; 2025 Daniel. Todos os direitos reservados.</p>
+      </footer>
+    </aside>
+
+    <main class="content">
+        <section id="hero" class="hero">
+            <div class="hero-overlay">
+                <h2>Eu sou um Desenvolvedor</h2>
+                <p>Transformando ideias em soluções digitais</p>
+                <a href="#projetos" class="btn">Ver Portfólio</a>
+            </div>
+        </section>
+
+
+
+      <section id="projetos" class="card-container">
+        <a href="https://miroutepe.com.br/" class="card" target="_blank">
+          <h3>MiRoutepe</h3>
+          <p>Plataforma de gestão de rotas</p>
+        </a>
+        <a href="https://agrogestor.miroutepe.com.br/" class="card" target="_blank">
+          <h3>AgroGestor</h3>
+          <p>Gestão agrícola inteligente</p>
+        </a>
+        <a href="https://imaestry.miroutepe.com.br/" class="card" target="_blank">
+          <h3>IMaestry</h3>
+          <p>Plataforma educacional</p>
+        </a>
+        <a href="https://ipatrimonium.miroutepe.com.br/" class="card" target="_blank">
+          <h3>IPatrimonium</h3>
+          <p>Controle patrimonial eficiente</p>
+        </a>
+      </section>
+
+      <br>
+      <br>
+            <!-- Linha divisória centralizada -->
+            <hr class="w-3/5 mx-auto border-t-2 border-gray-300 rounded-full shadow-sm my-10" />
+
+        <section id="sobre" class="sobre-section">
+            <div class="sobre-container">
+                <div class="sobre-foto">
+                    <img src="img/dan_perfil_portfolio3.png" alt="Daniel Gus" class="sobre-img" />
+                </div>
+                <div class="sobre-texto">
+                    <h2>💻 Sobre mim</h2>
+                    <p>
+                        Sou Daniel Gus, desenvolvedor e educador apaixonado por tecnologia, com experiência em Django, Python, IoT e infraestrutura de servidores. Tenho atuado na formação de novos profissionais em cursos técnicos e de extensão, além de liderar projetos voltados à inovação e empreendedorismo tecnológico.
+                    </p>
+                    <p>
+                        Atualmente, dedico-me a criar soluções inteligentes e acessíveis, como ferramentas web e sistemas de transcrição com IA e automação, hospedados em infraestrutura própria e autogerenciada.
+                    </p>
+                    <p>
+                        Meu foco é unir prática, aprendizado e inovação, conectando tecnologia ao desenvolvimento de pessoas e negócios.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+            <!-- Linha divisória centralizada -->
+            <hr class="w-3/5 mx-auto border-t-2 border-gray-300 rounded-full shadow-sm my-10" />
+
+      <section id="contato">
+        <h2>Contato</h2>
+        <p>📧 danielperitofd@gmail.com</p>
+      </section>
+    </main>
+  </div>
+    <script>
+        const hero = document.querySelector('.hero');
+        const images = [
+            'img/dan_perfil_portfolio1.png',
+            'img/dan_perfil_portfolio2.png',
+            'img/dan_perfil_portfolio3.png'
+        ];
+        const directions = ['diagonal-down', 'diagonal-up', 'diagonal-left', 'diagonal-right'];
+        let current = 0;
+
+        function changeBackground() {
+            // Atualiza imagem
+            hero.style.backgroundImage = `url('${images[current]}')`;
+
+            // Alterna direção
+            const direction = directions[current % directions.length];
+            hero.classList.remove(...directions);
+            void hero.offsetWidth; // força reflow
+            hero.classList.add(direction);
+
+            current = (current + 1) % images.length;
+        }
+
+        changeBackground(); // inicializa
+        setInterval(changeBackground, 8000); // troca a cada 8 segundos
+    </script>
+
+
+
+</body>
+</html>
