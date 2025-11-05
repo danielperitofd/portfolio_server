@@ -180,22 +180,23 @@ section {
   padding: 2rem 0;
 }
 
+/* NOVO ESTILO DE CARD COM IMAGEM DE FUNDO */
 .card {
   width: 240px;
-  background: var(--card-bg);
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 16px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-  text-align: center;
-  text-decoration: none;
-  color: var(--text);
   border: 1px solid rgba(255,255,255,0.1);
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
   box-shadow: 0 8px 22px rgba(0,0,0,0.5);
-  border-color: rgba(255,255,255,0.3);
+  border-color: var(--accent);
 }
 
 .card-img {
