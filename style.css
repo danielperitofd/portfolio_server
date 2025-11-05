@@ -179,26 +179,27 @@ section {
   justify-content: center;
   padding: 2rem 0;
 }
+
 /* NOVO ESTILO DE CARD COM IMAGEM DE FUNDO */
 .card {
   display: block;
   width: 240px;
   height: 160px;
   border-radius: 16px;
-  background-size: contain;      /* mostra a logo inteira */
-  background-position: center;   /* centraliza */
+  background-size: cover;        /* preenche toda a área do card */
+  background-position: center;   /* centraliza a imagem */
   background-repeat: no-repeat;  /* evita repetição */
-  background-color: var(--card-bg); /* fundo neutro escuro */
+  background-color: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 14px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;              /* garante que o conteúdo respeite os cantos arredondados */
 }
 
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 22px rgba(0,0,0,0.5);
   border-color: var(--accent);
-  background-color: #333; /* realce sutil no hover */
 }
 
 
