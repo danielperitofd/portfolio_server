@@ -1,1 +1,234 @@
-<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Daniel | Portfólio</title> <link rel="stylesheet" href="style.css" /> </head> <body> <div class="container"> <aside class="sidebar"> <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" /> <h1>Daniel</h1> <p>Desenvolvedor Fullstack no Brasil</p> <nav> <ul> <li><a href="#home">Início</a></li> <li><a href="#projetos">Projetos</a></li> <li><a href="#sobre">Sobre</a></li> <li><a href="#contato">Contato</a></li> </ul> </nav> <footer> <p>&copy; 2025 Daniel. Todos os direitos reservados.</p> </footer> </aside> <main class="content"> <section id="hero" class="hero"> <div class="hero-overlay"> <h2>Eu sou um Desenvolvedor</h2> <p>Transformando ideias em soluções digitais</p> <a href="#projetos" class="btn">Ver Portfólio</a> </div> </section> <section id="projetos" class="card-container"> <a href="https://miroutepe.com.br/" class="card" style="background-image: url('img/logo/miroutepe.PNG');" target="_blank"></a> <a href="https://agrogestor.miroutepe.com.br/" class="card" style="background-image: url('img/logo/iagrogestor.PNG');" target="_blank"></a> <a href="https://imaestry.miroutepe.com.br/" class="card" style="background-image: url('img/logo/imaestry.PNG');" target="_blank"></a> <a href="https://imobfb.miroutepe.com.br/" class="card" style="background-image: url('img/logo/imobfb.PNG');" target="_blank"></a> <a href="https://portal-iph.miroutepe.com.br/" class="card" style="background-image: url('img/logo/iph.PNG');" target="_blank"></a> <a href="https://mkids.miroutepe.com.br/" class="card" style="background-image: url('img/logo/mkids.PNG');" target="_blank"></a> <a href="https://mfinance.miroutepe.com.br/" class="card" style="background-image: url('img/logo/mfinance.PNG');" target="_blank"></a> </section> <br> <br> <!-- Linha divisória centralizada --> <hr class="w-3/5 mx-auto border-t-2 border-gray-300 rounded-full shadow-sm my-10" /> <section id="sobre" class="sobre-section"> <div class="sobre-container"> <div class="sobre-foto"> <img src="img/dan_perfil_portfolio3.png" alt="Daniel Gus" class="sobre-img" /> </div> <div class="sobre-texto"> <h2>💻 Sobre mim</h2> <p> Sou Daniel Gus, desenvolvedor e educador apaixonado por tecnologia, com experiência em Django, Python, IoT e infraestrutura de servidores. Tenho atuado na formação de novos profissionais em cursos técnicos e de extensão, além de liderar projetos voltados à inovação e empreendedorismo tecnológico. </p> <p> Atualmente, dedico-me a criar soluções inteligentes e acessíveis, como ferramentas web e sistemas de transcrição com IA e automação, hospedados em infraestrutura própria e autogerenciada. </p> <p> Meu foco é unir prática, aprendizado e inovação, conectando tecnologia ao desenvolvimento de pessoas e negócios. </p> </div> </div> </section> <!-- Linha divisória centralizada --> <hr class="w-3/5 mx-auto border-t-2 border-gray-300 rounded-full shadow-sm my-10" /> <section id="contato"> <h2>Contato</h2> <p>📧 danielperitofd@gmail.com</p> </section> </main> </div> <script> const hero = document.querySelector('.hero'); const images = [ 'img/dan_perfil_portfolio1.png', 'img/dan_perfil_portfolio2.png', 'img/dan_perfil_portfolio3.png' ]; const directions = ['diagonal-down', 'diagonal-up', 'diagonal-left', 'diagonal-right']; let current = 0; function changeBackground() { // Atualiza imagem hero.style.backgroundImage = url('${images[current]}'); // Alterna direção const direction = directions[current % directions.length]; hero.classList.remove(...directions); void hero.offsetWidth; // força reflow hero.classList.add(direction); current = (current + 1) % images.length; } changeBackground(); // inicializa setInterval(changeBackground, 8000); // troca a cada 8 segundos </script> </body> </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel | Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Preload fonts or add favicon here if available -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" />
+            <h1>Daniel</h1>
+            <p>Desenvolvedor Fullstack</p>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <p>&copy; 2025 Daniel. Todos os direitos reservados.</p>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="hero-overlay">
+                    <h2>Solução para sua ideia</h2>
+                    <p>Criamos plataformas web em produção para gestão, educação, finanças e agronegócio</p>
+                    <a href="#projetos" class="btn">Ver Portfólio</a>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projetos">
+                <h2
+                    style="margin-bottom: 30px; font-size: 2em; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px;">
+                    Meus Projetos</h2>
+                <div class="card-container">
+
+                    <!-- MiRoute -->
+                    <a href="miroute.html" class="card">
+                        <div class="card-image-bg" style="background-image: url('img/logo/miroutepe.PNG');"></div>
+                        <div class="card-content">
+                            <h3>MiRoute - Qualidade do Leite</h3>
+                            <p>Solução completa para rastreabilidade e gestão da qualidade na cadeia do leite.
+                                Integração entre produtores e laticínios com monitoramento IoT via dashboard.</p>
+                            <div class="card-tags">
+                                <span class="tag">IoT</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">Gestão Rural</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- AgroGestor -->
+                    <a href="agrogestor.html" class="card">
+                        <div class="card-image-bg" style="background-image: url('img/logo/iagrogestor.PNG');"></div>
+                        <div class="card-content">
+                            <h3>AgroGestor</h3>
+                            <p>Sistema de gestão focado em propriedades rurais. Controle financeiro, manejo de animais,
+                                pluviometria e indicadores estratégicos para tomada de decisão no campo.</p>
+                            <div class="card-tags">
+                                <span class="tag">Saas</span>
+                                <span class="tag">Financeiro</span>
+                                <span class="tag">Agronegócio</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iMaestry -->
+                    <a href="imaestry.html" class="card">
+                        <div class="card-image-bg" style="background-image: url('img/logo/imaestry.PNG');"></div>
+                        <div class="card-content">
+                            <h3>iMaestry</h3>
+                            <p>Plataforma inovadora que une música e Inteligência Artificial. Ferramentas de apoio ao
+                                aprendizado musical para estudantes e professores.</p>
+                            <div class="card-tags">
+                                <span class="tag">Música</span>
+                                <span class="tag">IA/AI</span>
+                                <span class="tag">Educação</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Portal IPH -->
+                    <a href="portal-iph.html" class="card">
+                        <div class="card-image-bg" style="background-image: url('img/logo/iph.PNG');"></div>
+                        <div class="card-content">
+                            <h3>Portal IPH | Gestão</h3>
+                            <p>Módulo administrativo seguro com gestão de hierarquias, controle de permissões granulares
+                                e autenticação robusta para administração eclesiástica.</p>
+                            <div class="card-tags">
+                                <span class="tag">Admin Painel</span>
+                                <span class="tag">Segurança</span>
+                                <span class="tag">Gestão de Usuários</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- ImobFB -->
+                    <a href="imobfb.html" class="card">
+                        <div class="card-image-bg" style="background-image: url('img/logo/imobfb.PNG');"></div>
+                        <div class="card-content">
+                            <h3>ImobFB - Inventário</h3>
+                            <p>Sistema interno para controle patrimonial. Conta com scanner de código de barras via
+                                browser, gestão de empréstimos, descartes e auditoria de ativos.</p>
+                            <div class="card-tags">
+                                <span class="tag">Inventário</span>
+                                <span class="tag">Scanner Web</span>
+                                <span class="tag">Logística</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- MKids -->
+                    <a href="mkids.html" class="card">
+                        <div class="card-image-bg" style="background-image: url('img/logo/mkids.PNG');"></div>
+                        <div class="card-content">
+                            <h3>MKids - Mérito Kids</h3>
+                            <p>Aplicação gamificada para incentivo de bons hábitos infantis. Pais definem tarefas e
+                                recompensas, ensinando que esforço gera conquistas.</p>
+                            <div class="card-tags">
+                                <span class="tag">Gamificação</span>
+                                <span class="tag">Educação</span>
+                                <span class="tag">Família</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- MFinance -->
+                    <a href="mfinance.html" class="card">
+                        <div class="card-image-bg" style="background-image: url('img/logo/mfinance.PNG');"></div>
+                        <div class="card-content">
+                            <h3>MFinance</h3>
+                            <p>Controle financeiro pessoal multiusuário com foco em simplicidade. Categorização
+                                inteligente de gastos e dashboard visual para saúde financeira.</p>
+                            <div class="card-tags">
+                                <span class="tag">Fintech</span>
+                                <span class="tag">Dashboard</span>
+                                <span class="tag">Pessoal</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Line Divider -->
+            <hr />
+
+            <!-- About Section -->
+            <section id="sobre" class="sobre-section">
+                <div class="sobre-container">
+                    <div class="sobre-foto">
+                        <img src="img/dan_perfil_portfolio3.png" alt="Daniel Gus" class="sobre-img" />
+                    </div>
+                    <div class="sobre-texto">
+                        <h2>💻 Sobre mim</h2>
+                        <p>
+                            Sou Daniel Gus, desenvolvedor e educador apaixonado por tecnologia, com sólida experiência
+                            em <strong>Python, Django, IoT e infraestrutura de servidores</strong>.
+                        </p>
+                        <p>
+                            Tenho atuado ativamente na formação de novos profissionais em cursos técnicos e de extensão,
+                            liderando projetos que unem inovação e empreendedorismo tecnológico.
+                        </p>
+                        <p>
+                            Atualmente, meu foco é criar <strong>soluções inteligentes e autogerenciadas</strong>, desde
+                            ferramentas web complexas até sistemas de automação com IA. Busco sempre conectar a prática
+                            técnica ao desenvolvimento real de pessoas e negócios.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Line Divider -->
+            <hr />
+
+            <!-- Contact Section -->
+            <section id="contato">
+                <h2>Vamos conectar?</h2>
+                <p style="font-size: 1.2em;">📧 danielperitofd@gmail.com</p>
+                <div style="margin-top: 20px;">
+                    <!-- Placeholder for social icons if the user adds them later -->
+                    <a href="https://github.com/danielperitofd" target="_blank" class="btn"
+                        style="background-color: #333; margin: 5px;">GitHub</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const hero = document.querySelector('.hero');
+        const images = [
+            'img/dan_perfil_portfolio1.png',
+            'img/dan_perfil_portfolio2.png',
+            'img/dan_perfil_portfolio3.png'
+        ];
+        const directions = ['diagonal-down', 'diagonal-up', 'diagonal-left', 'diagonal-right'];
+        let current = 0;
+
+        function changeBackground() {
+            // Updated to handle spaces in filenames just in case, though strictly not present here.
+            hero.style.backgroundImage = `url('${images[current]}')`;
+
+            // Alterna direção
+            const direction = directions[current % directions.length];
+            hero.classList.remove(...directions);
+            void hero.offsetWidth; // força reflow
+            hero.classList.add(direction);
+
+            current = (current + 1) % images.length;
+        }
+
+        // Initialize
+        if (images.length > 0) {
+            changeBackground();
+            setInterval(changeBackground, 8000);
+        }
+    </script>
+</body>
+
+</html>

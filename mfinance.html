@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MFinance | Daniel Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .detail-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .detail-header h2 {
+            font-size: 2.5em;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .detail-section {
+            margin-bottom: 40px;
+        }
+
+        .detail-section h3 {
+            color: var(--accent);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .detail-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .detail-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .detail-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .action-area {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" />
+            <h1>Daniel</h1>
+            <p>Desenvolvedor Fullstack</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <p>&copy; 2025 Daniel. Todos os direitos reservados.</p>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <a href="index.html" class="back-link">← Voltar para o Portfólio</a>
+
+            <div class="detail-header">
+                <h2>MFinance – Controle Financeiro Pessoal</h2>
+                <p class="tagline">Controle financeiro com foco em clareza, multiusuário e segurança.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>O que é</h3>
+                <p>Aplicação web de controle financeiro desenvolvida não para ser apenas "mais um app", mas um sistema
+                    de leitura rápida da saúde financeira, ideal para famílias ou pequenos grupos.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pontos Fortes</h3>
+                <ul class="detail-list">
+                    <li>Sistema multiusuário (ideal para famílias ou pequenos grupos)</li>
+                    <li>Dashboard financeiro com visualização clara de despesas e categorias</li>
+                    <li>Organização de gastos por período, tipo e recorrência</li>
+                    <li>Interface responsiva pensada para desktop e mobile</li>
+                    <li>Ênfase em segurança e controle de acesso</li>
+                </ul>
+            </div>
+
+            <div class="action-area">
+                <a href="https://mfinance.miroutepe.com.br/" target="_blank" class="btn">Acessar Projeto Online</a>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
