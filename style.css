@@ -978,3 +978,82 @@ hr {
 .mf-screen-card:has(img[src*="dashboard"]) img {
   object-position: top center;
 }
+
+/* ===== MFINANCE GALERIA PROPORCIONAL ===== */
+.mf-screen-grid {
+  grid-template-columns: repeat(12, 1fr);
+  align-items: stretch;
+}
+
+.mf-screen-card {
+  grid-column: span 6;
+}
+
+.mf-screen-wide {
+  grid-column: span 12;
+}
+
+.mf-screen-vertical {
+  grid-column: span 5;
+}
+
+.mf-screen-mobile {
+  grid-column: span 7;
+}
+
+.mf-screen-wide img {
+  height: 430px;
+  object-fit: contain;
+}
+
+.mf-screen-vertical img {
+  height: 560px;
+  object-fit: contain;
+}
+
+.mf-screen-mobile {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+}
+
+.mf-screen-mobile img {
+  height: 620px;
+  object-fit: contain;
+  background: linear-gradient(135deg, #06111d, #0b1c2c);
+}
+
+.mf-screen-mobile div {
+  border-left: 1px solid rgba(255,255,255,.08);
+}
+
+@media (max-width: 1100px) {
+  .mf-screen-card,
+  .mf-screen-wide,
+  .mf-screen-vertical,
+  .mf-screen-mobile {
+    grid-column: span 12;
+  }
+
+  .mf-screen-mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .mf-screen-mobile div {
+    border-left: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .mf-screen-wide img {
+    height: 260px;
+  }
+
+  .mf-screen-vertical img {
+    height: 460px;
+  }
+
+  .mf-screen-mobile img {
+    height: 520px;
+  }
+}
