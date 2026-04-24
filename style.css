@@ -949,3 +949,32 @@ hr {
     border-radius: 24px;
   }
 }
+/* ===== AJUSTE FINO DAS TELAS DO MFINANCE ===== */
+.mf-screen-card img {
+  object-fit: contain;
+  background: #f3f7fb;
+  padding: 10px;
+}
+
+.mf-screen-large img {
+  object-fit: contain;
+  background: #f3f7fb;
+  padding: 10px;
+}
+
+.mf-screen-card:has(img[src*="mobile"]) img {
+  height: 520px;
+  object-fit: contain;
+  background: linear-gradient(135deg, #06111d, #0b1c2c);
+  padding: 22px;
+}
+
+.mf-screen-card:has(img[src*="formulario"]) img {
+  object-position: top center;
+}
+
+.mf-screen-card:has(img[src*="relatorios"]) img,
+.mf-screen-card:has(img[src*="lancamentos"]) img,
+.mf-screen-card:has(img[src*="dashboard"]) img {
+  object-position: top center;
+}
