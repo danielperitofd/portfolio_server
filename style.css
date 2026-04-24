@@ -979,56 +979,73 @@ hr {
   object-position: top center;
 }
 
-/* ===== MFINANCE GALERIA PROPORCIONAL ===== */
+/* ===== MFINANCE - AJUSTE FINAL DA GALERIA ===== */
 .mf-screen-grid {
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
-  align-items: stretch;
+  gap: 24px;
+  align-items: start;
 }
 
 .mf-screen-card {
-  grid-column: span 6;
+  overflow: hidden;
+  border-radius: 26px;
+  background: rgba(7, 17, 29, .86);
+  border: 1px solid rgba(39, 183, 255, .16);
+  box-shadow: 0 18px 46px rgba(0,0,0,.28);
+}
+
+.mf-screen-card div {
+  padding: 22px;
+}
+
+.mf-screen-card img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  background: #f3f7fb;
+  padding: 12px;
+  box-sizing: border-box;
 }
 
 .mf-screen-wide {
   grid-column: span 12;
 }
 
+.mf-screen-wide img {
+  height: auto;
+  max-height: 620px;
+}
+
 .mf-screen-vertical {
   grid-column: span 5;
 }
 
+.mf-screen-vertical img {
+  height: 620px;
+}
+
 .mf-screen-mobile {
   grid-column: span 7;
-}
-
-.mf-screen-wide img {
-  height: 430px;
-  object-fit: contain;
-}
-
-.mf-screen-vertical img {
-  height: 560px;
-  object-fit: contain;
-}
-
-.mf-screen-mobile {
   display: grid;
-  grid-template-columns: 0.9fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
 .mf-screen-mobile img {
   height: 620px;
-  object-fit: contain;
   background: linear-gradient(135deg, #06111d, #0b1c2c);
 }
 
 .mf-screen-mobile div {
   border-left: 1px solid rgba(255,255,255,.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 1100px) {
-  .mf-screen-card,
   .mf-screen-wide,
   .mf-screen-vertical,
   .mf-screen-mobile {
@@ -1041,18 +1058,20 @@ hr {
 
   .mf-screen-mobile div {
     border-left: none;
+    height: auto;
   }
 }
 
 @media (max-width: 760px) {
+  .mf-screen-grid {
+    gap: 18px;
+  }
+
   .mf-screen-wide img {
-    height: 260px;
+    max-height: 360px;
   }
 
-  .mf-screen-vertical img {
-    height: 460px;
-  }
-
+  .mf-screen-vertical img,
   .mf-screen-mobile img {
     height: 520px;
   }
