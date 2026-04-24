@@ -2,16 +2,19 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MFinance | Daniel Portfólio</title>
-    <link rel="stylesheet" href="./style.css?v=5" />
+    <link rel="stylesheet" href="./style.css?v=6">
 </head>
 
-<body class="project-detail-page mfinance-page">
+<body>
     <div class="container">
+
+        <!-- SIDEBAR -->
         <aside class="sidebar">
-            <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" />
+            <img src="img/dan_perfil_portfolio1.png" alt="Daniel Perfil" class="profile-img">
+
             <h1>Daniel</h1>
             <p>Desenvolvedor Fullstack</p>
 
@@ -29,163 +32,167 @@
             </footer>
         </aside>
 
+        <!-- CONTEÚDO -->
         <main class="content">
-            <a href="index.html#projetos" class="project-back-link">← Voltar para o Portfólio</a>
 
-            <section class="mf-hero">
-                <div class="mf-hero-text">
-                    <span class="mf-kicker">Controle Financeiro Pessoal</span>
-
-                    <img src="img/logos_cards/mfinance_logo.png" alt="MFinance" class="mf-logo">
+            <!-- HERO -->
+            <section class="project-hero mfinance-hero">
+                <div class="hero-copy">
+                    <span class="section-label">CONTROLE FINANCEIRO PESSOAL</span>
 
                     <h1>Clareza financeira para decisões melhores.</h1>
 
                     <p>
-                        O MFinance organiza receitas, despesas, categorias e relatórios em uma experiência visual
-                        simples, segura e direta para famílias ou pequenos grupos.
+                        O MFinance organiza receitas, despesas, categorias e relatórios
+                        em uma experiência visual simples, segura e direta para famílias
+                        ou pequenos grupos.
                     </p>
 
-                    <div class="mf-actions">
-                        <a href="https://mfinance.miroutepe.com.br/" target="_blank" class="mf-btn-primary">
+                    <div class="hero-actions">
+                        <a href="https://mfinance.miroutepe.com.br/" target="_blank" class="btn">
                             Acessar projeto online
                         </a>
-                        <a href="#telas" class="mf-btn-secondary">
+
+                        <a href="#galeria" class="btn btn-outline">
                             Ver telas do sistema
                         </a>
                     </div>
                 </div>
 
-                <div class="mf-hero-preview">
-                    <img src="img/telas/mfinance/dashboard.png" alt="Dashboard do MFinance">
+                <div class="hero-media">
+                    <img src="img/logos_cards/mfinance_logo.png" alt="Logo MFinance">
                 </div>
             </section>
 
-            <section class="mf-info-grid">
-                <article class="mf-panel">
-                    <span class="mf-icon">💡</span>
+            <!-- INFO BOXES -->
+            <section class="info-grid">
+                <article class="info-card">
+                    <span class="info-icon">💡</span>
                     <h2>O que é</h2>
                     <p>
-                        Aplicação web de controle financeiro criada para dar uma leitura rápida da saúde financeira,
-                        evitando aquela aventura arqueológica em planilhas que ninguém merece.
+                        Aplicação web de controle financeiro criada para dar uma leitura
+                        rápida da saúde financeira, evitando aquela aventura arqueológica
+                        em planilhas que ninguém merece.
                     </p>
                 </article>
 
-                <article class="mf-panel">
-                    <span class="mf-icon">🔐</span>
+                <article class="info-card">
+                    <span class="info-icon">🔐</span>
                     <h2>Foco do sistema</h2>
                     <p>
-                        Organização de lançamentos, categorização de gastos, visão por período, gráficos e acesso
-                        multiusuário com controle e segurança.
+                        Organização de lançamentos, categorização de gastos, visão por
+                        período, gráficos e acesso multiusuário com controle e segurança.
                     </p>
                 </article>
             </section>
 
-            <section class="mf-features">
-                <div class="mf-section-title">
-                    <span>Recursos</span>
-                    <h2>Pontos fortes</h2>
-                </div>
+            <!-- PONTOS FORTES -->
+            <section class="feature-section">
+                <span class="section-label">RECURSOS</span>
+                <h2>Pontos fortes</h2>
 
-                <div class="mf-feature-grid">
-                    <div class="mf-feature-card">
-                        <span>📊</span>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">📊</span>
                         <h3>Dashboard financeiro</h3>
                         <p>Resumo visual com indicadores, gráficos e leitura rápida dos gastos.</p>
-                    </div>
+                    </article>
 
-                    <div class="mf-feature-card">
-                        <span>👥</span>
+                    <article class="feature-card">
+                        <span class="feature-icon">👥</span>
                         <h3>Multiusuário</h3>
                         <p>Ideal para famílias ou pequenos grupos acompanharem a vida financeira.</p>
-                    </div>
+                    </article>
 
-                    <div class="mf-feature-card">
-                        <span>🧾</span>
+                    <article class="feature-card">
+                        <span class="feature-icon">🧾</span>
                         <h3>Lançamentos</h3>
                         <p>Cadastro e acompanhamento de receitas, despesas e recorrências.</p>
-                    </div>
+                    </article>
 
-                    <div class="mf-feature-card">
-                        <span>🏷️</span>
+                    <article class="feature-card">
+                        <span class="feature-icon">🏷️</span>
                         <h3>Categorias</h3>
                         <p>Organização por tipo de gasto para entender para onde o dinheiro está indo.</p>
-                    </div>
+                    </article>
 
-                    <div class="mf-feature-card">
-                        <span>📈</span>
+                    <article class="feature-card">
+                        <span class="feature-icon">📈</span>
                         <h3>Relatórios</h3>
                         <p>Análises visuais para tomada de decisão e controle financeiro.</p>
-                    </div>
+                    </article>
 
-                    <div class="mf-feature-card">
-                        <span>🛡️</span>
+                    <article class="feature-card">
+                        <span class="feature-icon">🛡️</span>
                         <h3>Segurança</h3>
                         <p>Controle de acesso e estrutura pensada para proteger os dados do usuário.</p>
-                    </div>
+                    </article>
                 </div>
             </section>
 
-            <section id="telas" class="mf-screens">
-                <div class="mf-section-title">
-                    <span>Interface</span>
-                    <h2>Telas do MFinance</h2>
-                    <p>Algumas telas reais do sistema em funcionamento.</p>
-                </div>
+            <!-- GALERIA -->
+            <section class="gallery-section" id="galeria">
+                <span class="section-label">INTERFACE</span>
+                <h2>Telas do MFinance</h2>
+                <p class="section-text">Algumas telas reais do sistema em funcionamento.</p>
 
                 <div class="mf-screen-grid">
-                    <article class="mf-screen-card mf-screen-large">
-                        <img src="img/telas/mfinance/dashboard.png" alt="Dashboard financeiro">
+
+                    <article class="mf-screen-card mf-screen-wide">
+                        <img src="img/telas/mfinance/dashboard.png" alt="Dashboard principal">
                         <div>
                             <h3>Dashboard principal</h3>
                             <p>Visão geral da saúde financeira, gráficos e indicadores rápidos.</p>
                         </div>
                     </article>
 
-                    <article class="mf-screen-card">
-                        <img src="img/telas/mfinance/lancamentos.png" alt="Lista de lançamentos">
+                    <article class="mf-screen-card mf-screen-wide">
+                        <img src="img/telas/mfinance/lancamentos.png" alt="Lançamentos">
                         <div>
                             <h3>Lançamentos</h3>
                             <p>Controle de receitas e despesas organizadas.</p>
                         </div>
                     </article>
 
-                    <article class="mf-screen-card">
-                        <img src="img/telas/mfinance/formulario.png" alt="Formulário financeiro">
+                    <article class="mf-screen-card mf-screen-vertical">
+                        <img src="img/telas/mfinance/formulario.png" alt="Novo lançamento">
                         <div>
                             <h3>Novo lançamento</h3>
                             <p>Cadastro de movimentações financeiras.</p>
                         </div>
                     </article>
 
-                    <article class="mf-screen-card">
-                        <img src="img/telas/mfinance/relatorios.PNG" alt="Relatórios financeiros">
+                    <article class="mf-screen-card mf-screen-wide">
+                        <img src="img/telas/mfinance/relatorios.PNG" alt="Relatórios">
                         <div>
                             <h3>Relatórios</h3>
                             <p>Análises visuais para leitura dos gastos.</p>
                         </div>
                     </article>
 
-                    <article class="mf-screen-card">
-                        <img src="img/telas/mfinance/mobile.PNG" alt="Tela mobile do MFinance">
+                    <article class="mf-screen-card mf-screen-mobile">
+                        <img src="img/telas/mfinance/mobile.PNG" alt="Mobile">
                         <div>
                             <h3>Mobile</h3>
                             <p>Experiência responsiva para acesso em telas menores.</p>
                         </div>
                     </article>
+
                 </div>
             </section>
 
-            <section class="mf-tech">
-                <div>
-                    <span class="mf-kicker">Stack e proposta</span>
+            <!-- STACK -->
+            <section class="stack-section">
+                <div class="stack-copy">
+                    <span class="section-label">STACK E PROPOSTA</span>
                     <h2>Construído para ser simples de usar e fácil de evoluir.</h2>
                     <p>
-                        Projeto desenvolvido com foco em clareza visual, organização de dados e possibilidade de
-                        evolução para novos módulos financeiros.
+                        Projeto desenvolvido com foco em clareza visual, organização de dados
+                        e possibilidade de evolução para novos módulos financeiros.
                     </p>
                 </div>
 
-                <div class="mf-tech-tags">
+                <div class="stack-tags">
                     <span>Python</span>
                     <span>Django</span>
                     <span>Bootstrap</span>
@@ -194,6 +201,7 @@
                     <span>Responsivo</span>
                 </div>
             </section>
+
         </main>
     </div>
 </body>
