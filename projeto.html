@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto | Daniel Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="project-detail-page">
+    <div class="container">
+        <aside class="sidebar">
+            <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" />
+            <h1>Daniel</h1>
+            <p>Desenvolvedor Fullstack</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <p>&copy; 2025 Daniel. Todos os direitos reservados.</p>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <a href="index.html#projetos" class="project-back-link">← Voltar para o Portfólio</a>
+
+            <article class="project-hero" id="projectHero">
+                <div class="project-hero-top">
+                    <img id="projectLogo" src="" alt="">
+                </div>
+
+                <div class="project-hero-body">
+                    <span class="project-kicker" id="projectCategory"></span>
+                    <h1 id="projectTitle"></h1>
+                    <p class="project-lead" id="projectDescription"></p>
+
+                    <div class="project-detail-grid">
+                        <section class="project-panel">
+                            <h2>O que é</h2>
+                            <p id="projectAbout"></p>
+
+                            <div class="project-chips" id="projectTags"></div>
+                        </section>
+
+                        <section class="project-panel">
+                            <h2>Pontos fortes</h2>
+                            <ul class="project-feature-list" id="projectFeatures"></ul>
+                        </section>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="index.html#projetos" class="btn-outline">Ver outros projetos</a>
+                        <a href="#" target="_blank" class="btn-main" id="projectUrl">Acessar projeto online</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        const projects = {
+            abates: {
+                title: "AbateS",
+                category: "Gestão de Abatedouros",
+                logo: "img/logos_cards/abatgus_logo.png",
+                accent: "#74c943",
+                url: "https://abates.miroutepe.com.br/",
+                description: "Sistema para gestão de processos internos de abatedouros, com foco em fluxo operacional, rastreabilidade e indicadores.",
+                about: "O AbateS organiza etapas como portaria, tesouraria, ordem de abate, produção e aproveitamento de matérias-primas, criando uma visão clara do processo operacional.",
+                tags: ["Portaria", "Tesouraria", "Abate", "Dashboards", "Rastreabilidade"],
+                features: [
+                    "Controle das etapas operacionais do abatedouro",
+                    "Organização de animais, fornecedores e processos",
+                    "Dashboards para leitura rápida da produção",
+                    "Rastreabilidade e histórico das movimentações",
+                    "Apoio à tomada de decisão gerencial"
+                ]
+            },
+            agrogestor: {
+                title: "AgroGestor",
+                category: "Gestão Inteligente de Fazendas",
+                logo: "img/logos_cards/agrogestor_logo.png",
+                accent: "#8bd450",
+                url: "https://agrogestor.miroutepe.com.br/",
+                description: "Sistema de gestão focado em propriedades rurais, controle financeiro, manejo de animais e indicadores estratégicos.",
+                about: "O AgroGestor reúne informações essenciais da propriedade rural em uma plataforma clara, ajudando no controle financeiro, produtivo e operacional do campo.",
+                tags: ["SaaS", "Agronegócio", "Financeiro", "Indicadores"],
+                features: [
+                    "Controle financeiro da propriedade",
+                    "Manejo de animais e registros produtivos",
+                    "Acompanhamento de indicadores estratégicos",
+                    "Organização de dados rurais em uma única tela",
+                    "Interface pensada para decisões rápidas"
+                ]
+            },
+            edutrack: {
+                title: "EduTrack",
+                category: "Gerenciamento Educacional",
+                logo: "img/logos_cards/edutrack_logo.png",
+                accent: "#31a8ff",
+                url: "https://edutrack.miroutepe.com.br/",
+                description: "Plataforma para gerenciamento de cursos, inscritos e turmas com foco em organização administrativa.",
+                about: "O EduTrack centraliza matrículas, cursos, turmas e acompanhamento de inscritos, facilitando a gestão educacional sem transformar a secretaria num labirinto de planilhas.",
+                tags: ["Cursos", "Turmas", "Inscritos", "Relatórios"],
+                features: [
+                    "Gerenciamento de inscritos",
+                    "Criação e gestão de turmas",
+                    "Organização de cursos e matrículas",
+                    "Acompanhamento de status dos alunos",
+                    "Relatórios para apoio administrativo"
+                ]
+            },
+            imaestry: {
+                title: "iMaestry",
+                category: "Música e Tecnologia",
+                logo: "img/logos_cards/imaestry_logo.png",
+                accent: "#7f5cff",
+                url: "https://imaestry.miroutepe.com.br/",
+                description: "Plataforma que une música, tecnologia e Inteligência Artificial como apoio ao aprendizado musical.",
+                about: "O iMaestry nasce como uma solução para estudantes e professores de música, oferecendo recursos digitais para estudo, acompanhamento e evolução musical.",
+                tags: ["Música", "IA", "Educação", "Tecnologia"],
+                features: [
+                    "Apoio ao aprendizado musical",
+                    "Ferramentas digitais para estudantes",
+                    "Recursos para professores acompanharem evolução",
+                    "Integração entre música e IA",
+                    "Interface voltada para prática e estudo"
+                ]
+            },
+            imobs: {
+                title: "Imob’s",
+                category: "Inventário e Movimentação",
+                logo: "img/logos_cards/imobs_logo.png",
+                accent: "#23c7b7",
+                url: "https://imobfb.miroutepe.com.br/",
+                description: "Sistema interno para controle patrimonial, inventário físico e movimentação de ativos.",
+                about: "O Imob’s permite controlar itens, movimentações, empréstimos, descartes e leituras por código de barras diretamente pelo navegador.",
+                tags: ["Inventário", "Movimentação", "Código de Barras", "Segurança"],
+                features: [
+                    "Gestão de itens patrimoniais",
+                    "Histórico completo de movimentações",
+                    "Fluxo de transferência, empréstimo e descarte",
+                    "Leitura por código de barras via navegador",
+                    "Área administrativa protegida por autenticação"
+                ]
+            },
+            iph: {
+                title: "Igreja Presbiteriana de Heliópolis",
+                category: "Portal Institucional",
+                logo: "img/logos_cards/iph_logo.png",
+                accent: "#d9bf66",
+                url: "https://portal-iph.miroutepe.com.br/",
+                description: "Portal institucional para comunicação, presença digital e apoio à gestão da comunidade.",
+                about: "O Portal IPH apresenta a igreja, sua missão, comunicação e estrutura institucional em uma experiência visual mais organizada e profissional.",
+                tags: ["Fé", "Comunhão", "Missão", "Portal"],
+                features: [
+                    "Apresentação institucional clara",
+                    "Comunicação com membros e visitantes",
+                    "Organização de conteúdo da igreja",
+                    "Visual profissional e responsivo",
+                    "Base para expansão de módulos administrativos"
+                ]
+            },
+            mfinance: {
+                title: "MFinance",
+                category: "Controle Financeiro Pessoal",
+                logo: "img/logos_cards/mfinance_logo.png",
+                accent: "#27b7ff",
+                url: "https://mfinance.miroutepe.com.br/",
+                description: "Controle financeiro com foco em clareza, multiusuário, segurança e leitura rápida da saúde financeira.",
+                about: "O MFinance foi criado para organizar despesas, categorias, períodos e recorrências, oferecendo uma visão objetiva da vida financeira pessoal ou familiar.",
+                tags: ["Dashboard", "Multiusuário", "Controle", "Segurança"],
+                features: [
+                    "Dashboard financeiro com leitura rápida",
+                    "Organização de despesas por categoria",
+                    "Controle por período, tipo e recorrência",
+                    "Ideal para famílias ou pequenos grupos",
+                    "Ênfase em segurança e controle de acesso"
+                ]
+            },
+            mkids: {
+                title: "MKids",
+                category: "Educação por Mérito",
+                logo: "img/logos_cards/mkids_logo.png",
+                accent: "#ffcc33",
+                url: "https://mkids.miroutepe.com.br/",
+                description: "Plataforma gamificada para incentivo de bons hábitos infantis, tarefas, recompensas e disciplina visual.",
+                about: "O MKids transforma atividades do dia a dia em metas visuais, com pontuação, validação dos pais e recompensas configuráveis.",
+                tags: ["Educação", "Gamificação", "Família", "Mérito"],
+                features: [
+                    "Sistema de pontuação por atividades",
+                    "Objetivos visuais e recompensas",
+                    "Validação das tarefas pelos pais",
+                    "Relatórios semanais de progresso",
+                    "Produto com propósito educacional e familiar"
+                ]
+            },
+            utilitsx: {
+                title: "UtilitsX",
+                category: "Central de Ferramentas Inteligentes",
+                logo: "img/logos_cards/utilitsx_logo.png",
+                accent: "#a66cff",
+                url: "https://utilities.miroutepe.com.br/",
+                description: "Uma plataforma que reúne ferramentas úteis em um único lugar, com praticidade, rapidez e eficiência.",
+                about: "O UtilitsX centraliza soluções como conversão de imagem, transcrição de áudio e vídeo e segmentação de prompts em TXT.",
+                tags: ["Conversor", "Transcrição", "TXT", "Produtividade"],
+                features: [
+                    "Conversor de imagem JPG para BMP",
+                    "Transcritor de áudio e vídeo",
+                    "Segmentador de prompt em arquivo TXT",
+                    "Ferramentas simples e objetivas",
+                    "Base para expansão de novos utilitários"
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const app = params.get("app") || "mfinance";
+        const project = projects[app] || projects.mfinance;
+
+        document.title = `${project.title} | Daniel Portfólio`;
+        document.getElementById("projectHero").style.setProperty("--project-accent", project.accent);
+        document.getElementById("projectLogo").src = project.logo;
+        document.getElementById("projectLogo").alt = project.title;
+        document.getElementById("projectCategory").textContent = project.category;
+        document.getElementById("projectTitle").textContent = project.title;
+        document.getElementById("projectDescription").textContent = project.description;
+        document.getElementById("projectAbout").textContent = project.about;
+        document.getElementById("projectUrl").href = project.url;
+
+        document.getElementById("projectTags").innerHTML = project.tags
+            .map(tag => `<span>${tag}</span>`)
+            .join("");
+
+        document.getElementById("projectFeatures").innerHTML = project.features
+            .map(feature => `<li>${feature}</li>`)
+            .join("");
+    </script>
+</body>
+
+</html>
