@@ -930,3 +930,12 @@ hr {
     padding: 26px;
   }
 }
+
+.theme-agro {
+  border: 1px solid rgba(139, 212, 80, 0.25);
+}
+
+.theme-agro:hover {
+  box-shadow: 0 10px 30px rgba(139, 212, 80, 0.2);
+  border-color: #8bd450;
+}
