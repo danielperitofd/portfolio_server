@@ -948,3 +948,8 @@ hr {
   border-color: #c8a2c8;
   box-shadow: 0 10px 30px rgba(200, 162, 200, 0.25);
 }
+
+.portfolio-card.theme-psi .portfolio-logo-box img {
+  max-height: 200px;
+  transform: scale(1.25);
+}
