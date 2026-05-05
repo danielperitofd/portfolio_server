@@ -939,3 +939,12 @@ hr {
   box-shadow: 0 10px 30px rgba(139, 212, 80, 0.2);
   border-color: #8bd450;
 }
+
+.theme-psi {
+  --card-accent: #c8a2c8; /* lilás suave */
+}
+
+.theme-psi:hover {
+  border-color: #c8a2c8;
+  box-shadow: 0 10px 30px rgba(200, 162, 200, 0.25);
+}
