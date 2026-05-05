@@ -948,3 +948,12 @@ hr {
   border-color: #c8a2c8;
   box-shadow: 0 10px 30px rgba(200, 162, 200, 0.25);
 }
+
+.theme-psi {
+  --card-accent: #d6a7c9;
+}
+
+.portfolio-card.theme-psi:hover {
+  border-color: #d6a7c9;
+  box-shadow: 0 10px 30px rgba(214, 167, 201, 0.25);
+}
