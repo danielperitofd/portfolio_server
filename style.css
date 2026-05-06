@@ -957,3 +957,7 @@ hr {
   border-color: #d6a7c9;
   box-shadow: 0 10px 30px rgba(214, 167, 201, 0.25);
 }
+
+.theme-raia {
+  --card-accent: #31a8ff;
+}
