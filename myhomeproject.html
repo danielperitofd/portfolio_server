@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Casa Bougainville, estudo residencial com planta interativa, visita 3D esquemática e simulação de orçamento." />
+    <title>Casa Bougainville | Daniel Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .detail-header { margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 20px; }
+        .detail-header h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--primary); margin-bottom: 10px; }
+        .detail-section { margin-bottom: 32px; }
+        .detail-section h3 { color: var(--accent); font-size: 1.5em; margin-bottom: 15px; }
+        .detail-list { list-style: none; padding: 0; }
+        .detail-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .detail-list li::before { content: "•"; color: var(--primary); font-weight: bold; position: absolute; left: 0; }
+        .back-link { display: inline-flex; align-items: center; color: var(--text-muted); text-decoration: none; margin-bottom: 20px; font-size: .9em; }
+        .back-link:hover { color: var(--primary); }
+        .action-area { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+        .project-cover { width: 100%; max-width: 760px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; display: block; margin: 0 0 24px; box-shadow: 0 12px 30px rgba(0,0,0,.2); }
+        .project-notice { border-left: 3px solid #c79b51; padding: 10px 14px; background: rgba(199,155,81,.08); border-radius: 0 8px 8px 0; margin: 0 0 26px; line-height: 1.6; }
+        .project-images { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin: 0 0 34px; max-width: 760px; }
+        .project-images figure { margin: 0; min-width: 0; }
+        .project-images img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; border: 1px solid rgba(255,255,255,.10); }
+        .project-images figcaption { padding: 8px 2px 0; font-size: .85rem; color: var(--text-muted); }
+        .project-cover { background: #15251e; }
+        .project-images img[alt*="planta"] { object-fit: contain; background: #fff; }
+        @media (max-width: 600px) { .project-images { grid-template-columns: 1fr; } .project-images img { aspect-ratio: 4/3; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" />
+            <h1>Daniel</h1>
+            <p>Desenvolvedor Fullstack</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <footer><p>&copy; 2026 Daniel. Todos os direitos reservados.</p></footer>
+        </aside>
+        <main class="content">
+            <a href="index.html#projetos" class="back-link">← Voltar para o Portfólio</a>
+            <div class="detail-header">
+                <h2>Casa Bougainville</h2>
+                <p class="tagline">Projeto residencial conceitual | Experiência virtual interativa</p>
+            </div>
+            <img class="project-cover" src="img/logos_cards/myhomeproject_logo.png"
+                 alt="Identidade visual Casa Bougainville, com fachada arquitetônica e tipografia dourada" />
+            <p class="project-notice"><strong>Estudo conceitual:</strong> a visualização 3D, as dimensões e a simulação de custos são ilustrativas. O conteúdo não substitui projeto arquitetônico e estrutural, responsabilidade técnica, licenças ou orçamento profissional.</p>
+            <div class="detail-section">
+                <h3>O que é</h3>
+                <p>Apresentação web interativa de uma residência de esquina em terreno de 10 × 20 metros, desenvolvida para explorar o conceito antes da construção. O ambiente combina fachada, planta interativa, modelo 3D esquemático e uma ferramenta inicial de estimativa de custos.</p>
+            </div>
+            <div class="detail-section">
+                <h3>Pontos fortes</h3>
+                <ul class="detail-list">
+                    <li>Planta interativa com seleção dos ambientes da residência</li>
+                    <li>Exploração 3D esquemática com vista aérea e modo de caminhada</li>
+                    <li>Alternância de iluminação entre dia e noite</li>
+                    <li>Galeria de imagens conceituais e planta de referência ampliável</li>
+                    <li>Estudo de lote de esquina, três quartos, piscina lateral e previsão de pavimento futuro</li>
+                    <li>Simulador editável de orçamento, incluindo construção, piscina, extras e imprevistos</li>
+                    <li>Interface adaptada a computador e dispositivos móveis</li>
+                </ul>
+            </div>
+            <div class="detail-section">
+                <h3>Imagens do estudo residencial</h3>
+                <div class="project-images">
+                    <figure>
+                        <img src="img/myhomeproject_fachada.jpg" loading="lazy"
+                             alt="Perspectiva conceitual da fachada da Casa Bougainville em lote de esquina" />
+                        <figcaption>Fachada contemporânea — perspectiva conceitual</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/myhomeproject_planta.jpg" loading="lazy"
+                             alt="Planta conceitual do pavimento térreo e piscina lateral" />
+                        <figcaption>Planta de distribuição — estudo não executivo</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="action-area">
+                <a href="https://danielperitofd.github.io/myhomeproject/" target="_blank"
+                   rel="noopener noreferrer" class="btn">Explorar Projeto Online</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
