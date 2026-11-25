@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio NutriFeedback: plataforma de escuta escolar e avaliação da alimentação." />
+    <title>NutriFeedback | Daniel Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .detail-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            padding-bottom: 20px;
+        }
+        .detail-header h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .detail-section { margin-bottom: 32px; }
+        .detail-section h3 {
+            color: var(--accent);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .detail-list { list-style: none; padding: 0; }
+        .detail-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .detail-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: .9em;
+        }
+        .back-link:hover { color: var(--primary); }
+        .action-area {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+        }
+        .project-cover {
+            width: 100%;
+            max-width: 760px;
+            height: auto;
+            display: block;
+            margin: 0 0 32px;
+            border-radius: 14px;
+            background: #fcfdfa;
+            box-shadow: 0 12px 30px rgba(0,0,0,.2);
+        }
+        .project-notice {
+            border-left: 3px solid #35aa67;
+            padding: 10px 14px;
+            background: rgba(53,170,103,.08);
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="img/dan_perfil_portfolio2.png" alt="Daniel Perfil" class="profile-img" />
+            <h1>Daniel</h1>
+            <p>Desenvolvedor Fullstack</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <p>&copy; 2026 Daniel. Todos os direitos reservados.</p>
+            </footer>
+        </aside>
+
+        <main class="content">
+            <a href="index.html#projetos" class="back-link">← Voltar para o Portfólio</a>
+
+            <div class="detail-header">
+                <h2>NutriFeedback</h2>
+                <p class="tagline">Escuta escolar e avaliação da alimentação</p>
+            </div>
+
+            <img class="project-cover"
+                 src="img/nutrifeedback_capa.png"
+                 alt="Identidade visual NutriFeedback: escuta escolar e alimentação" />
+
+            <p class="project-notice">
+                <strong>Projeto digital:</strong> ferramenta de coleta de percepções dos estudantes
+                sobre a alimentação escolar. A integração de envio está configurada no projeto,
+                mas seu funcionamento em produção não foi validado nesta apresentação.
+            </p>
+
+            <div class="detail-section">
+                <h3>O que é</h3>
+                <p>
+                    Plataforma web de avaliação da alimentação escolar, projetada para
+                    ouvir estudantes sobre as refeições oferecidas, organizar respostas
+                    e apoiar decisões de melhoria do serviço com base nas percepções coletadas.
+                </p>
+            </div>
+
+            <div class="detail-section">
+                <h3>Pontos fortes</h3>
+                <ul class="detail-list">
+                    <li>Pesquisa geral referente aos últimos cinco dias letivos</li>
+                    <li>Avaliação rápida de uma refeição do dia</li>
+                    <li>Perguntas sobre consumo, satisfação, sabor, temperatura e quantidade</li>
+                    <li>Fluxo guiado por etapas, com barra de progresso e navegação simples</li>
+                    <li>Formulário sem solicitação de nome, matrícula ou e-mail</li>
+                    <li>Layout responsivo para celulares, tablets e computadores</li>
+                    <li>Endpoint de Google Apps Script configurado para envio das respostas</li>
+                </ul>
+            </div>
+
+            <div class="action-area">
+                <a href="https://danielperitofd.github.io/nutrifeedback/"
+                   target="_blank" rel="noopener noreferrer" class="btn">
+                    Acessar Projeto Online
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
